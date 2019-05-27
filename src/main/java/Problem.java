@@ -7,4 +7,5 @@ public interface Problem {
     Production makeA(Vertex Vert, double h, double dt, double t, CyclicBarrier Barrier);
 
     Production makeAN(Vertex Vert, double h, double dt, double t, CyclicBarrier Barrier);
+
 }
