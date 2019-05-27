@@ -43,9 +43,9 @@ public class Exercise4 implements Problem {
                 double xi = h * i,
                         xi1 = xi + h;
 
-                double ui_1
-                double ui = 0.75 * v.m_x[0] + 0.25 * v.m_x[1];
-                double  = 0.75 * v.m_x[1] + 0.25 * v.m_x[2];
+                double u1 = v.m_x[0];
+                double u2 = 0.75 * v.m_x[0] + 0.25 * v.m_x[1];
+                double u3 = 0.75 * v.m_x[1] + 0.25 * v.m_x[2];
                 double u4 = v.m_x[2];
 
                 v.m_a = new double[][]{
@@ -55,8 +55,8 @@ public class Exercise4 implements Problem {
 
                 v.m_b = new double[]{
                         0.,
-                        ui / (2 * dt) + Simulation.solution[i-1] / (4 * dx2) - ui / (2 * dx2) +  / (4 * dx2) + pi2 * ui / 4 - pi2 * h * xi,
-                         / (2 * dt) + ui / (4 * dx2) -  / (2 * dx2) + u4 / (4 * dx2) + pi2 *  / 4 - pi2 * h * xi1
+                        u2 / (2 * dt) + u1 / (4 * dx2) - u1 / (2 * dx2) + u3 / (4 * dx2) + pi2 * u2 / 4 - pi2 * h * 1,
+                        u3 / (2 * dt) + u2 / (4 * dx2) - u2 / (2 * dx2) + u4 / (4 * dx2) + pi2 * u3 / 4 - pi2 * h * 1
                 };
                 i++;
                 return v;
@@ -75,6 +75,7 @@ public class Exercise4 implements Problem {
                 double u2 = 0.75 * v.m_x[0] + 0.25 * v.m_x[1];
                 double u3 = 0.75 * v.m_x[1] + 0.25 * v.m_x[2];
                 double u4 = v.m_x[2];
+
                 v.m_a = new double[][]{
                         {0., 0., 0.},
                         {0., 1. / (2 * dt) + 1. / (2 * dx2) - pi2 / 4, -1. / (2 * dx2)},

@@ -7,7 +7,7 @@ import java.util.function.Function;
 public class Simulation {
 
     //    final Problem problem = new HeatTransfer();
-    final Problem problem = new Exercise4();
+    final Problem problem = new Exercise3();
 //        final Problem problem = new Exercise2CN();
     public static double[] solution;
 
